@@ -6,7 +6,6 @@ export const getScores = async () => {
   const scoreresponse = await scorerequest.json();
   return scoreresponse.result;
 };
-
 export const submitScore = async (name, score) => {
   const submitObj = {
     user: name,
@@ -14,8 +13,11 @@ export const submitScore = async (name, score) => {
   };
   const scorerequest = await fetch(datab, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(submitObj),
+    headers: {
+      'Content-Type': 'application/json; charset=UTF-8',
+    },
+
   });
   const scoreresponse = await scorerequest.json();
   return scoreresponse.result;
