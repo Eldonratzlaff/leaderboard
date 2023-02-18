@@ -1,4 +1,3 @@
-
 // ID: a2Lrrum29HKFEk3Oe7wz
 const datab = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a2Lrrum29HKFEk3Oe7wz/scores';
 
@@ -21,4 +20,3 @@ export const submitScore = async (name, score) => {
   const scoreresponse = await scorerequest.json();
   return scoreresponse.result;
 };
-
